@@ -1,0 +1,38 @@
+{
+  "name": "server-info",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/harrisonfishco/server-info.git"
+  },
+  "author": "Harrison Fishco",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/harrisonfishco/server-info/issues"
+  },
+  "homepage": "https://github.com/harrisonfishco/server-info#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "css-loader": "^6.6.0",
+    "extract-loader": "^5.1.0",
+    "file-loader": "^6.2.0",
+    "nodemon": "^2.0.15",
+    "postcss-loader": "^6.2.1",
+    "sass": "^1.49.9",
+    "sass-loader": "^12.6.0",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "@material/button": "^13.0.0",
+    "@material/layout-grid": "^13.0.0",
+    "express": "^4.17.3"
+  }
+}
