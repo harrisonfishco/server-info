@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const fs = require('fs')
 var path = require('path')
+const os = require('os')
+const { stringify } = require('querystring')
 
 app.use((req, res, next) => {
     const auth = {login: 'admin', password: 'password'}
@@ -19,6 +21,17 @@ app.use(express.static('dist'))
 
 app.get('/', (req, res) => {
     res.sendFile("index.html")
+})
+
+app.post('/info', (req, res) => {
+    const data = {
+        tmem: os.totalmem(),
+        fmem: os.freemem(),
+        type: os.type(),
+        uptime: os.uptime(),
+        cpus: os.cpus()
+    }
+    res.send(JSON.stringify(data))
 })
 
 app.listen(8080, () => {
