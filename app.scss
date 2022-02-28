@@ -3,9 +3,19 @@
 @use '@material/layout-grid/mdc-layout-grid';
 @use '@material/card';
 @use '@material/typography/mdc-typography';
+@use '@material/banner/styles';
 
 @include card.core-styles;
 
-.foo-button {
-  @include button.container-fill-color(darksalmon);
+.mdc-card.sys-info {
+    padding: 0px 16px;
+
+}
+
+.sys-info > h5 {
+    margin: 16px 0px;
+}
+
+.sys-info > p {
+    margin: 0px;
 }
