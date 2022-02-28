@@ -7,9 +7,12 @@
 
 @include card.core-styles;
 
+html, body {
+    margin: 0px;
+}
+
 .mdc-card.sys-info {
     padding: 0px 16px;
-
 }
 
 .sys-info > h5 {

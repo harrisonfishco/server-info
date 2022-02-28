@@ -37,7 +37,9 @@
     "@material/banner": "^13.0.0",
     "@material/button": "^13.0.0",
     "@material/card": "^13.0.0",
+    "@material/elevation": "^13.0.0",
     "@material/layout-grid": "^13.0.0",
+    "@material/ripple": "^13.0.0",
     "@material/typography": "^13.0.0",
     "express": "^4.17.3"
   }
