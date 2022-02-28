@@ -11,6 +11,10 @@ html, body {
     margin: 0px;
 }
 
+.mdc-banner__content {
+    max-width: unset;
+}
+
 .mdc-card.sys-info {
     padding: 0px 16px;
 }
@@ -21,4 +25,8 @@ html, body {
 
 .sys-info > p {
     margin: 0px;
+}
+
+.sys-info > #MEM-INFO {
+    margin-bottom: 16px;
 }

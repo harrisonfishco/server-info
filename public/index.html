@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
+    <meta content="initial-scale=1, width=device-width" name="viewport">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 		<link rel="stylesheet" href="bundle.css">
 		<script src="index.js"></script>
@@ -12,25 +13,28 @@
           <div class="mdc-banner__text">This application is in development. Not all features work as intended!</div>
         </div>
         <div class="mdc-banner__actions">
-          <button class="mdc-button mdc-banner__primary-action">I Understand</button>
+          <button class="mdc-button mdc-banner__primary-action">
+            <div class="mdc-button__ripple"></div>
+            <div class="mdc-button__label">I Understand</div>
+          </button>
         </div>
       </div>
     </div>
 		<div class="mdc-layout-grid">
 			<div class="mdc-layout-grid__inner">
-				<div class="mdc-layout-grid__cell"></div>
-				<div class="mdc-layout-grid__cell">
+				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-3-desktop"></div>
+				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-3-desktop">
 					<div class="mdc-card sys-info">
 						<h5 class="mdc-typography--headline5">System Information</h5>
 						<p class="mdc-typography--subtitle1">CPU</p>
 						<p class="mdc-typography--body1" id="CPU-NAME"></p>
-
+            <hr>
 						<p class="mdc-typography--subtitle1">Memory</p>
 						<p class="mdc-typography--body1" id="MEM-USAGE">0%</p>
 						<p class="mdc-typography--body1" id="MEM-INFO">0 GB / 0GB</p>
 					</div>
 				</div>
-				<div class="mdc-layout-grid__cell"></div>
+				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-3-desktop"></div>
 			</div>
 		</div>
     <script src="bundle.js"></script>
