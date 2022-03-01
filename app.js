@@ -13,7 +13,7 @@ class GraphData {
     }
 
     addPoint(usage) {
-        for(var i = 1; i < 10; ++i)
+        for(var i = 9; i >= 0; --i)
             this.data[i] = this.data[i - 1]
         this.data[0] = usage
     }
