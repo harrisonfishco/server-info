@@ -3,7 +3,30 @@ const app = express()
 const fs = require('fs')
 var path = require('path')
 const os = require('os')
-const { stringify } = require('querystring')
+
+class GraphData {
+    data = new Array(10)
+
+    GraphData() {
+        for(var i = 0; i < 10; ++i)
+            this.data[i] = 0
+    }
+
+    addPoint(usage) {
+        for(var i = 1; i < 10; ++i)
+            this.data[i] = this.data[i - 1]
+        this.data[0] = usage
+    }
+
+    print() {
+        var str = ""
+        for(var i = 0; i < 10; ++i)
+            str += `${this.data[i].toFixed(2)} `
+        console.log(str)
+    }
+}
+
+const gd = new GraphData()
 
 app.use((req, res, next) => {
     const auth = {login: 'admin', password: 'password'}
@@ -24,13 +47,16 @@ app.get('/', (req, res) => {
 })
 
 app.post('/info', (req, res) => {
-    const data = {
+    var data = {
         tmem: os.totalmem(),
         fmem: os.freemem(),
         type: os.type(),
         uptime: os.uptime(),
         cpus: os.cpus()
     }
+    gd.addPoint((data.tmem - data.fmem) / data.tmem)
+    gd.print()
+    data.gd = gd.data
     res.send(JSON.stringify(data))
 })
 

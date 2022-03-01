@@ -27,7 +27,7 @@
 					<div class="mdc-card sys-info">
 						<h5 class="mdc-typography--headline5">System Information</h5>
 						<p class="mdc-typography--subtitle1">CPU</p>
-						<p class="mdc-typography--body1" id="CPU-NAME"></p>
+						<p class="mdc-typography--body1" id="CPU-NAME">CPU</p>
             <hr>
 						<p class="mdc-typography--subtitle1">Memory</p>
 						<p class="mdc-typography--body1" id="MEM-USAGE">0%</p>
@@ -40,6 +40,17 @@
 				<div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell--span-0-tablet mdc-layout-grid__cell--span-3-desktop"></div>
 			</div>
 		</div>
+    <div class="mdc-layout-grid">
+      <div class="mdc-layout-grid__inner">
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell-span-0-tablet mdc-layout-grid__cell--span-3-desktop"></div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-phone mdc-layout-grid__cell--span-12-tablet mdc-layout-grid__cell--span-6-desktop">
+            <div class="mdc-card graph">
+              <canvas id="MEMGRAPH"></canvas>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-0-phone mdc-layout-grid__cell-span-0-tablet mdc-layout-grid__cell--span-3-desktop"></div>
+      </div>
+    </div>
     <script src="bundle.js"></script>
 	</body>
 </html>
