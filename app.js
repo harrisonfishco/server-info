@@ -5,7 +5,7 @@ var path = require('path')
 const os = require('os')
 
 class GraphData {
-    data = new Array(10)
+    data = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
     GraphData() {
         for(var i = 0; i < 10; ++i)
